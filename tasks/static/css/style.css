@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Row */
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-row input:focus {
+    border-color: #6c63ff;
+}
+
+/* Add Button */
+.input-row button {
+    padding: 10px 15px;
+    background: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-row button:hover {
+    background: #574fd6;
+}
+
+/* Task Row */
+.task-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Task Text */
+.task-title {
+    flex: 1;
+    color: #333;
+    font-size: 15px;
+}
+
+/* Edit Button */
+.btn-edit {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #2196f3;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-edit:hover {
+    color: #0b7dda;
+}
+
+/* Delete Button */
+.btn-delete {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    background: #e60000;
+}
+
+/* Save Button */
+.btn-save {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background: #218838;
+}
+
+/* Edit Input */
+.edit-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* No Task */
+.no-task {
+    text-align: center;
+    color: #777;
+    margin-top: 10px;
+}

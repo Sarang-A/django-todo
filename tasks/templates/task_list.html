@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    
+
+<div class="card">
+    <h1>Todo List</h1>
+
+    
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="add">
+        <div class="input-row">
+            <input type="text" name="title" placeholder="Enter task">
+            <button type="submit">Add</button>
+        </div>
+    </form>
+
+   
+    {% if tasks %}
+        {% for task in tasks %}
+        <div class="task-row">
+
+            {% if edit_task and edit_task.pk == task.pk %}
+                
+                <form method="post" style="display:flex; gap:10px; flex:1;">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="edit">
+                    <input type="hidden" name="pk" value="{{ task.pk }}">
+                    <input type="text" name="title" value="{{ task.title }}" class="edit-input">
+                    <button type="submit" class="btn-save">Save</button>
+                </form>
+
+            {% else %}
+               
+                <span class="task-title">{{ task.title }}</span>
+
+                <a href="?edit={{ task.pk }}" class="btn-edit">Edit</a>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="delete">
+                    <input type="hidden" name="pk" value="{{ task.pk }}">
+                    <button type="submit" class="btn-delete">Delete</button>
+                </form>
+
+            {% endif %}
+
+        </div>
+        {% endfor %}
+    {% else %}
+        <p class="no-task">No tasks yet. Add one above!</p>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
