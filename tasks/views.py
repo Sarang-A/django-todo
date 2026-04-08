@@ -13,20 +13,20 @@ def task_list(request):
     if request.method == 'POST':
         action = request.POST.get('action')
 
-        # Add new task
+        
         if action == 'add':
             title = request.POST.get('title')
             if title:
                 Task.objects.create(title=title)
 
-        # Save edited task
+        
         elif action == 'edit':
             pk = request.POST.get('pk')
             task = get_object_or_404(Task, pk=pk)
             task.title = request.POST.get('title')
             task.save()
 
-        # Delete task
+        
         elif action == 'delete':
             pk = request.POST.get('pk')
             task = get_object_or_404(Task, pk=pk)
