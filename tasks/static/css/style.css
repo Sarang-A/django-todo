@@ -1,139 +1,182 @@
-
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #9face6);
-    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
+/* CARD */
 .card {
-    background: #ffffff;
+    background: #fff;
+    width: 420px;
     padding: 25px;
-    width: 400px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+/* TITLE */
 .card h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
 
-.input-row {
-    display: flex;
-    gap: 10px;
+/* FORM */
+form {
     margin-bottom: 20px;
 }
 
-.input-row input {
-    flex: 1;
+input[type="text"],
+textarea,
+input[type="date"],
+input[type="file"] {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
     border-radius: 8px;
+    border: 1px solid #ccc;
     outline: none;
     transition: 0.3s;
 }
 
-.input-row input:focus {
-    border-color: #6c63ff;
+textarea {
+    resize: none;
+    height: 60px;
 }
 
+input:focus,
+textarea:focus {
+    border-color: #667eea;
+}
 
-.input-row button {
-    padding: 10px 15px;
-    background: #6c63ff;
-    color: #fff;
+/* ADD BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
     border: none;
+    background: #667eea;
+    color: #fff;
+    font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.input-row button:hover {
-    background: #574fd6;
+button:hover {
+    background: #5a67d8;
 }
 
-
+/* TASK ROW */
 .task-row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: #f7f7f7;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    align-items: flex-start;
+    background: #f8f9ff;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: 0.3s;
 }
 
+.task-row:hover {
+    background: #eef1ff;
+}
 
-.task-title {
+/* TASK CONTENT */
+.task-content {
     flex: 1;
-    color: #333;
-    font-size: 15px;
 }
 
+.task-content strong {
+    font-size: 16px;
+    color: #222;
+}
 
+.task-content p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+}
+
+.task-content small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* IMAGE */
+.task-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+/* ACTIONS */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+/* EDIT BUTTON */
 .btn-edit {
-    margin-right: 10px;
     text-decoration: none;
     color: #2196f3;
     font-weight: bold;
-    transition: 0.3s;
+    font-size: 14px;
 }
 
 .btn-edit:hover {
     color: #0b7dda;
 }
 
-
+/* DELETE BUTTON */
 .btn-delete {
     background: #ff4d4d;
-    color: white;
+    color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 5px;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 13px;
 }
 
 .btn-delete:hover {
     background: #e60000;
 }
 
-
+/* SAVE BUTTON */
 .btn-save {
     background: #28a745;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
 }
 
 .btn-save:hover {
     background: #218838;
 }
 
-
+/* EDIT MODE INPUTS */
 .edit-input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
-
+/* NO TASK */
 .no-task {
     text-align: center;
-    color: #777;
+    color: #999;
     margin-top: 10px;
 }
