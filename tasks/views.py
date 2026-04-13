@@ -16,7 +16,7 @@ def task_list(request):
             title = request.POST.get('title')
             description = request.POST.get('description')
             due_date = request.POST.get('due_date')
-            image = request.FILES.get('image')  # 🔥 important
+            image = request.FILES.get('image')  
 
             if title:
                 Task.objects.create(
