@@ -13,7 +13,7 @@
 <div class="card">
     <h1>Todo List</h1>
 
-    <!-- ADD TASK -->
+    
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="hidden" name="action" value="add">
@@ -29,13 +29,13 @@
         <button type="submit">Add</button>
     </form>
 
-    <!-- TASK LIST -->
+   
     {% for task in tasks %}
     <div class="task-row">
 
         {% if edit_task and edit_task.pk == task.pk %}
 
-            <!-- EDIT MODE -->
+           
             <form method="post" enctype="multipart/form-data" style="flex:1;">
                 {% csrf_token %}
                 <input type="hidden" name="action" value="edit">
@@ -51,7 +51,7 @@
 
         {% else %}
 
-            <!-- NORMAL VIEW -->
+            
             <div class="task-content">
                 <strong>{{ task.title }}</strong>
 

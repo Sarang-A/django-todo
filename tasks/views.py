@@ -12,7 +12,6 @@ def task_list(request):
     if request.method == 'POST':
         action = request.POST.get('action')
 
-        # ➕ ADD TASK
         if action == 'add':
             title = request.POST.get('title')
             description = request.POST.get('description')
@@ -27,7 +26,7 @@ def task_list(request):
                     image=image
                 )
 
-        # ✏️ EDIT TASK
+        
         elif action == 'edit':
             pk = request.POST.get('pk')
             task = get_object_or_404(Task, pk=pk)
@@ -41,7 +40,7 @@ def task_list(request):
 
             task.save()
 
-        # ❌ DELETE TASK
+       
         elif action == 'delete':
             pk = request.POST.get('pk')
             task = get_object_or_404(Task, pk=pk)

@@ -1,11 +1,10 @@
-/* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
@@ -15,7 +14,7 @@ body {
     align-items: center;
 }
 
-/* CARD */
+
 .card {
     background: #fff;
     width: 420px;
@@ -24,14 +23,14 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* TITLE */
+
 .card h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* FORM */
+
 form {
     margin-bottom: 20px;
 }
@@ -59,7 +58,7 @@ textarea:focus {
     border-color: #667eea;
 }
 
-/* ADD BUTTON */
+
 button {
     width: 100%;
     padding: 10px;
@@ -76,7 +75,7 @@ button:hover {
     background: #5a67d8;
 }
 
-/* TASK ROW */
+
 .task-row {
     display: flex;
     justify-content: space-between;
@@ -92,7 +91,6 @@ button:hover {
     background: #eef1ff;
 }
 
-/* TASK CONTENT */
 .task-content {
     flex: 1;
 }
@@ -115,7 +113,6 @@ button:hover {
     color: #888;
 }
 
-/* IMAGE */
 .task-img {
     width: 70px;
     height: 70px;
@@ -124,7 +121,6 @@ button:hover {
     border-radius: 8px;
 }
 
-/* ACTIONS */
 .actions {
     display: flex;
     flex-direction: column;
@@ -132,7 +128,6 @@ button:hover {
     margin-left: 10px;
 }
 
-/* EDIT BUTTON */
 .btn-edit {
     text-decoration: none;
     color: #2196f3;
@@ -144,7 +139,6 @@ button:hover {
     color: #0b7dda;
 }
 
-/* DELETE BUTTON */
 .btn-delete {
     background: #ff4d4d;
     color: #fff;
@@ -159,7 +153,6 @@ button:hover {
     background: #e60000;
 }
 
-/* SAVE BUTTON */
 .btn-save {
     background: #28a745;
 }
@@ -168,13 +161,12 @@ button:hover {
     background: #218838;
 }
 
-/* EDIT MODE INPUTS */
 .edit-input {
     width: 100%;
     margin-bottom: 5px;
 }
 
-/* NO TASK */
+
 .no-task {
     text-align: center;
     color: #999;
